@@ -5,7 +5,7 @@ metadata:
   name: pod-webapp
   namespace: app
   labels:
-    app: employee
+    app: employees
 spec:
   containers:
     - name: container-webapp
