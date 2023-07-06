@@ -23,7 +23,7 @@ spec:
             - containerPort: 80
           env:
             - name: DBHOST
-              value: "service-mysql.db.svc.cluster.local"
+              value: "svc-mysql.db.svc.cluster.local"
             - name: DBPORT
               value: "3306"
             - name: DBUSER
