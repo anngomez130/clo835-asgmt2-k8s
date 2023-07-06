@@ -4,6 +4,8 @@ kind: ReplicaSet
 metadata:
   name: rs-mysql
   namespace: db
+  labels:
+    app: mysql
 spec:
   replicas: 3
   selector:
