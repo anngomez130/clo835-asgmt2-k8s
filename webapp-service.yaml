@@ -6,7 +6,7 @@ metadata:
   namespace: app
 spec:
   selector:
-    app: employee
+    app: employees
   ports:
     - port: 80
       targetPort: 80
