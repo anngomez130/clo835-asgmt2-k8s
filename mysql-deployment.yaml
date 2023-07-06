@@ -4,6 +4,8 @@ kind: Deployment
 metadata:
   name: dp-mysql
   namespace: db
+  labels:
+    app: mysql
 spec:
   replicas: 3
   selector:
