@@ -7,21 +7,30 @@ metadata:
   labels:
     app: employees
 spec:
-  containers:
-    - name: container-webapp
-      image: 717693563238.dkr.ecr.us-east-1.amazonaws.com/webapp:071180f
-      ports:
-        - containerPort: 80
-      env:
-        - name: DBHOST
-          value: "service-mysql.db.svc.cluster.local"
-        - name: DBPORT
-          value: "3306"
-        - name: DBUSER
-          value: "root"
-        - name: DBPWD
-          value: "pw"
-        - name: DATABASE
-          value: "employees"
-        - name: APP_COLOR
-          value: "blue"
+  replicas: 3
+  selector:
+    matchLabels:
+      app: employees
+  template:
+    metadata:
+      labels:
+        app: employees
+    spec:
+      containers:
+        - name: container-webapp
+          image: 717693563238.dkr.ecr.us-east-1.amazonaws.com/webapp:071180f
+          ports:
+            - containerPort: 80
+          env:
+            - name: DBHOST
+              value: "service-mysql.db.svc.cluster.local"
+            - name: DBPORT
+              value: "3306"
+            - name: DBUSER
+              value: "root"
+            - name: DBPWD
+              value: "pw"
+            - name: DATABASE
+              value: "employees"
+            - name: APP_COLOR
+              value: "blue"
