@@ -14,14 +14,14 @@ spec:
         - containerPort: 80
       env:
         - name: DBHOST
-          value: service-mysql
+          value: "service-mysql.db.svc.cluster.local"
         - name: DBPORT
-          value: 3306
+          value: "3306"
         - name: DBUSER
-          value: root
+          value: "root"
         - name: DBPWD
-          value: pw
+          value: "pw"
         - name: DATABASE
-          value: employees
+          value: "employees"
         - name: APP_COLOR
-          value: blue
+          value: "blue"
