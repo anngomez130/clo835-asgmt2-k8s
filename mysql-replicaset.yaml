@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: replicaset-mysql
+  name: rs-mysql
   namespace: db
 spec:
   replicas: 3
